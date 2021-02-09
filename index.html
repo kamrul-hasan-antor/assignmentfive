@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Food Monster</title>
+    <!---- Bootstrap ---->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!----- CSS ---->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <section class="navArea">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Monster Food</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Recipes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blogs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div id="searchBox" class="col-md-10 search mt-4">
+                <h2 class="text-center my-5">Welcome to Monster Meal</h2>
+                <div class="d-flex">
+                    <input id="inputSearchArea" class="form-control me-2" type="search"
+                        placeholder="Search your food name">
+                    <button onclick="getMealList()" id="searchButton" class="btn ">Search</button>
+                </div>
+            </div>
+        </div>
+        <div id="meal-ingredients" class="row">
+        </div>
+        <div id="mealItems" class="row">
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
