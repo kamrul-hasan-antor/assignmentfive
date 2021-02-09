@@ -3,9 +3,9 @@ const getMealList = () => {
   let searchInput = document.getElementById("inputSearchArea").value;
   if (searchInput == "") {
     document.getElementById("mealItems").innerHTML = `
-    <div id="warningMessage" class="mt-3 mx-auto" style="background-color: #FFFFFF	;"">
-        <h2 class="text-center">Please insert your food name..</h2>
-        </div>`;
+    <div id="warningMessage" class="mt-3 mx-auto" style="background-color: #FFFFFF;">
+      <h2 class="text-center">Please insert your food name..</h2>
+    </div>`;
   } else {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInput}`)
       .then((res) => res.json())
@@ -23,13 +23,10 @@ const getMealList = () => {
                 `;
           });
         } else {
-          totalMeal = `
-                <div class="row text-center">
-                    <div class="col-md-12 text-warning">
-                        <h2>Sorry! we could not find any meal.Please Search Again.</h2>
-                    </div>
-                </div> 
-            `;
+          totalMeal = ` 
+                <div id="warningMessage" class="mt-3 mx-auto" style="background-color: #FFFFFF;">
+                  <h2 class="text-center">Sorry! We couldn't get any meal. Please Search Again..</h2>
+                </div>`;
         }
         const mealList = document.getElementById("mealItems");
         mealList.innerHTML = totalMeal;
@@ -73,7 +70,7 @@ const addMealAll = (meal) => {
   document.getElementById("meal-ingredients").innerHTML = detailOfMeal;
 };
 
-///// mealDetails hide on search click function
+///// The function of  Meal Details hide on search click..........
 const getHiddenOnClick = () => {
   const searchButton = document.getElementById("searchButton");
   searchButton.addEventListener("click", function () {

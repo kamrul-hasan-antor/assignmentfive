@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <!---- Nav area ----->
     <header>
         <section class="navArea">
             <nav class="navbar navbar-expand-lg navbar-light ">
@@ -44,22 +45,26 @@
             </nav>
         </section>
     </header>
-    <div class="container">
-        <div class="row">
-            <div id="searchBox" class="col-md-10 search mt-4">
-                <h2 class="text-center my-5">Welcome to Monster Meal</h2>
-                <div class="d-flex">
-                    <input id="inputSearchArea" class="form-control me-2" type="search"
-                        placeholder="Search your food name">
-                    <button onclick="getMealList()" id="searchButton" class="btn ">Search</button>
+
+    <!------- Main Area ------>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div id="searchBox" class="col-md-10 search mt-4">
+                    <h2 class="text-center my-5">Welcome to Monster Meal</h2>
+                    <div class="d-flex">
+                        <input id="inputSearchArea" class="form-control me-2" type="search"
+                            placeholder="Search your food name">
+                        <button onclick="getMealList()" id="searchButton" class="btn ">Search</button>
+                    </div>
                 </div>
             </div>
+            <div id="meal-ingredients" class="row">
+            </div>
+            <div id="mealItems" class="row">
+            </div>
         </div>
-        <div id="meal-ingredients" class="row">
-        </div>
-        <div id="mealItems" class="row">
-        </div>
-    </div>
+    </main>
     <script src="app.js"></script>
 </body>
 
