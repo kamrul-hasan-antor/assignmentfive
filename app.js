@@ -52,7 +52,7 @@ const addMealAll = (meal) => {
                 <img src="${meal.strMealThumb}" alt="" class="img-fluid rounded">
                 <h2 class="mt-3">${meal.strMeal}</h2>
                 <div class="ingredients">
-                    <h3>Ingredients </h3>
+                    <p>Ingredients </p>
                     <ul id="ingredients-list">
                         <li class="measure">${meal.strIngredient1} ${meal.strMeasure1}</li>
                         <li class="measure">${meal.strIngredient2} ${meal.strMeasure2}</li>
@@ -75,6 +75,6 @@ const getHiddenOnClick = () => {
   const searchButton = document.getElementById("searchButton");
   searchButton.addEventListener("click", function () {
     const detailOfMeal = document.getElementById("mealDetailsId");
-    detailOfMeal.style = "display:none";
+    detailOfMeal.style.display = "none";
   });
 };
